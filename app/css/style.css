@@ -268,11 +268,11 @@ a.checkout {
   font-weight: normal;
 }
 
-.popular-list {
+.catalog-list {
   list-style: none;
 }
 
-.popular-list h3 {
+.catalog-list h3 {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   color: #000000;
@@ -281,16 +281,16 @@ a.checkout {
   text-align: center;
 }
 
-.popular-list a {
+.catalog-list a {
   font-size: 14px;
   line-height: 18px;
 }
 
-.popular-list .button-green {
+.catalog-list .button-green {
   box-shadow: inset 0 -3px #367315;
 }
 
-.popular-list .button-green:focus {
+.catalog-list .button-green:focus {
   box-shadow: none;
   color: #ffffff;
 }
@@ -328,11 +328,11 @@ a.checkout {
   border: 3px solid rgba(50, 66, 92, 0.3);
 }
 
-.popular-item.catalog-item {
+.catalog-list .catalog-item {
   border: 1px solid #e5e5e5;
 }
 
-.popular-item.catalog-item:hover {
+.catalog-list .catalog-item:hover {
   border:none;
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
@@ -582,4 +582,196 @@ p.service-slogan {
 .write-us-button button {
   outline: none;
   border: none;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs li {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.breadcrumbs a {
+  color: #000000;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  text-decoration: underline;
+}
+
+.page-title {
+  color: #32425c;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  background-color: #f2f6f8;
+}
+
+.filters-title {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  background-color: #f7f3ec;
+}
+
+.price-filter,
+.maker-filter,
+.supply-filter {
+  border: none;
+}
+
+.price-filter legend,
+.maker-filter legend,
+.supply-filter legend {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.price-slider-block {
+  background-color: #f7f3ec;
+}
+
+.price-filter input {
+  background-color: #f7f3ec;
+  border: none;
+  text-align: center;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #000000;
+  outline: none;
+}
+
+.maker-filter ul,
+.supply-filter ul {
+  list-style: none;
+}
+
+.maker-filter label,
+.supply-filter label {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.maker-filter input:disabled + label,
+.supply-filter input:disabled + label {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.filter-button {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+}
+
+.sorting {
+  background-color: #f7f3ec;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: underline;
+  text-decoration-color: rgba(238, 54, 67, 0.3);
+}
+
+.sorting a:hover {
+  color: rgba(0, 0, 0, 1);
+  text-decoration: underline;
+  text-decoration-color: rgba(238, 54, 67, 1);
+}
+
+.sorting li.active a {
+  color: rgb(238, 54, 67);
+  text-decoration: none;
+}
+
+.pagination-list {
+  list-style: none;
+}
+.pagination-list a {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  text-transform: uppercase;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.pagination-list a:hover {
+  border: 1px solid #bdc6ca;
+}
+
+.pagination-list a:focus {
+  border: 1px solid #ee3643;
+}
+
+.pagination-item-current {
+  background-color: #ee3643;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.modal-add-cart {
+  border-top: 2px solid #ee3643;
+  box-shadow: 0px 20px 40px 0px rgba(41, 52, 73, 0.75);
+
+  color: #000000;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.modal-bottom {
+  background-color: #f1f1f1;
+}
+
+.button-continue {
+  color: #000000;
+  background-color: #fff;
 }
