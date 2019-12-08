@@ -72,6 +72,10 @@ a {
   margin-bottom: 59px;
 }
 
+.inner-page .main-header {
+  margin-bottom: 20px;
+}
+
 .top-line {
   background-color: #293449;
 }
@@ -789,7 +793,11 @@ p.service-slogan {
 }
 
 .breadcrumbs {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
   list-style: none;
+  display: flex;
 }
 
 .breadcrumbs li {
@@ -810,6 +818,9 @@ p.service-slogan {
 }
 
 .page-title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 30px;
   color: #32425c;
   font-size: 30px;
   line-height: 30px;
@@ -819,7 +830,18 @@ p.service-slogan {
   background-color: #f2f6f8;
 }
 
+.layout-columns-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  width: 220px;
+}
+
 .filters-title {
+  margin: 0;
+  padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -833,6 +855,8 @@ p.service-slogan {
 .price-filter,
 .maker-filter,
 .supply-filter {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
@@ -864,6 +888,8 @@ p.service-slogan {
 
 .maker-filter ul,
 .supply-filter ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -894,9 +920,24 @@ p.service-slogan {
   background-color: #ffffff;
 }
 
+.layout-right-column {
+  width: 700px;
+}
+
 .sorting {
   background-color: #f7f3ec;
+  display: flex;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: normal;
+}
 
+.sorting-title {
+  margin: 0;
+  padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -906,7 +947,10 @@ p.service-slogan {
 }
 
 .sorting-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  display: flex;
 }
 
 .sorting a {
@@ -926,8 +970,21 @@ p.service-slogan {
   text-decoration: none;
 }
 
+.inner-page .catalog-list {
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.inner-page .catalog-item {
+  margin-bottom: 20px;
+}
+
 .pagination-list {
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
   list-style: none;
+  display: flex;
 }
 .pagination-list a {
   background-color: #ffffff;
@@ -960,6 +1017,29 @@ p.service-slogan {
   line-height: 18px;
   text-transform: uppercase;
   font-weight: normal;
+}
+
+.catalog-about {
+  background-color: #f2f6f8;
+  color: #000000;
+  padding: 68px 0;
+}
+
+.catalog-about h2 {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.catalog-about p {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 .modal-add-cart {
