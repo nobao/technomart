@@ -18,10 +18,20 @@
       <div class="top-line">
         <div class="container">
           <div class="top-line-wrapper">
-            <a class="button button-red main-header-logo">ТЕХНОМАРТ</a>
+            <a href="/" class="button button-red main-header-logo">ТЕХНОМАРТ</a>
             <form>
               <p class="search-field">
                 <input type="search" placeholder="Поиск">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
+                  height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
+                <g id="Layer_1">
+                </g>
+                <g id="Layer_2">
+                  <path fill="#231F20" d="M17,15.586l-3.542-3.542C14.421,10.782,15,9.21,15,7.5C15,3.358,11.643,0,7.5,0C3.358,0,0,3.358,0,7.5
+                    C0,11.643,3.358,15,7.5,15c1.71,0,3.282-0.579,4.544-1.542L15.586,17L17,15.586z M2,7.5C2,4.467,4.467,2,7.5,2
+                    C10.532,2,13,4.467,13,7.5c0,3.032-2.468,5.5-5.5,5.5C4.467,13,2,10.532,2,7.5z"/>
+                </g>
+                </svg>
                 <input class="visually-hidden" type="submit" value="Найти">
               </p>
             </form> 
@@ -43,21 +53,22 @@
               <li class="main-header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</li>
             </ul>
             
-            <!-- Навигация пользователя до входа в учетную запись -->
-            <ul class="user-navigation">
-              <li class="login-link">
-                <a href="login.html" class="login-link">Войти</a>  
-              </li>
-              <li class="registration-link">
-                <a href="registration.html" class="registration-link">Регистрация</a>  
-              </li>
-            </ul>
+            <nav class="user-account-block">
+              <div class="user-info">
+                <a href="#" class="user-logout"><span class="visually-hidden">Выход</span></a>
+                <span class="user-name">Равшан Джамшутович</span>
+              </div>
+              <ul class="user-account-navigation">
+                <li><a href="#">Мои заказы</a></li>
+                <li><a href="#">Личный кабинет</a></li>
+              </ul>
+            </nav>
           </div>
                 
           <ul class="site-navigation">
-            <li><a href="#">Главная</a></li>
+            <li><a href="/">Главная</a></li>
             <li><a href="#">Компания</a></li>
-            <li><a href="#">Каталог</a></li>
+            <li><a href="/catalog.html">Каталог</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Спецпредложения</a></li>
             <li><a href="#">Доставка</a></li>
@@ -75,7 +86,7 @@
 
     <div class="container">
       <ul class="breadcrumbs">
-        <li class="visually-hidden"><a href="index.html">Главная</a></li>
+        <li><a href="index.html">Главная</a></li>
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
         <li class="breadcrumbs-current">Перфораторы</li>
@@ -96,8 +107,10 @@
                   <a href="#" class="price-slider-handle-right"></a>
                 </div>
               </div>
-              <input type="text" class="min-price">
-              <input type="text" class="max-price">
+              <div class="price-wrapper">
+                <input type="text" class="min-price" value="0">
+                <input type="text" class="max-price" value="30000">
+              </div>              
             </fieldset>
     
             <fieldset class="maker-filter">
@@ -152,8 +165,18 @@
               <li class="sorting-type"><a href="#">По функционалу</a></li>
             </ul>
             <div class="sorting-order">
-              <a class="ascending-order" href="#">По возрастанию</a>
-              <a class="descending-order" href="#">По убыванию</a>
+              <a class="ascending-order active" href="#">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+                <polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
+                </svg>
+                <span class="visually-hidden">По возрастанию</span></a>
+              <a class="descending-order" href="#">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+                <polyline fill="#231F20" points="5.5,10 0,0 11,0 "/>
+                </svg>
+                <span class="visually-hidden">По убыванию</span></a>
             </div>
           </section>
       
@@ -182,7 +205,7 @@
                   <a href="#" class="button button-bookmark">В закладки</a>
                 </div>
               </li>
-              <li class="catalog-item">
+              <li class="catalog-item new">
                 <h3 class="catalog-item-title">Перфоратор BOSCH BFG 2000</h3>
                 <img src="img/bosch_bfg_2000.png" alt="Перфоратор BOSCH BFG 2000">
                 <p class="old-price"></p>
@@ -202,7 +225,7 @@
                   <a href="#" class="button button-bookmark">В закладки</a>
                 </div>
               </li>
-              <li class="catalog-item">
+              <li class="catalog-item new">
                 <h3 class="catalog-item-title">Перфоратор BOSCH BFG 6000</h3>
                 <img src="img/bosch_bfg_6000.png" alt="Перфоратор BOSCH BFG 6000">
                 <p class="old-price">30500 Р.</p>
@@ -275,7 +298,8 @@
       <div class="container">
         <h2>Пара слов о перфораторах</h2>
 
-        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>    
+        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+          <br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>    
       </div>
       
     </section>
@@ -321,9 +345,9 @@
           </p>
     
           <ul class="main-footer-social">
-            <li><a class="social-button" href="#">Вконтакте</a></li>
-            <li><a class="social-button" href="#">Facebook</a></li>
-            <li><a class="social-button" href="#">Instagram</a></li>
+            <li><a class="social-button vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+            <li><a class="social-button fb" href="#"><span class="visually-hidden">Facebook</span></a></li>
+            <li><a class="social-button insta" href="#"><span class="visually-hidden">Instagram</span></a></li>
           </ul>
     
           <p class="main-footer-feedback">
@@ -351,25 +375,18 @@
   </section> -->
 
   <section class="modal modal-add-cart">
-    <h2>Товар добавлен в корзину!</h2>
-    <div class="modal-bottom">
-      <a href="#" class="button button-red">Оформить заказ</a>
-      <a class="button button-continue">Продолжить покупки</a>
-    </div>    
-    <button class="modal-close" type="button">Закрыть</button>
+    <div class="add-cart-wrapper">
+      <h2>Товар добавлен в корзину!</h2>
+      <div class="modal-bottom">
+        <a href="#" class="button button-red">Оформить заказ</a>
+        <a href="#" class="button button-continue">Продолжить покупки</a>
+      </div> 
+    </div>       
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
 
   <!-- Навигация пользователя после входа в учетную запись -->
-  <nav class="user-account-block">
-    <div class="user-info">
-      <span class="user-name">Равшан Джамшутович</span>
-      <a href="#" class="user-logout visually-hidden">Выход</a>
-    </div>
-    <ul class="user-account-navigation">
-      <li><a href="#">Мои заказы</a></li>
-      <li><a href="#">Личный кабинет</a></li>
-    </ul>
-  </nav>
+  
 
 </body>
 
