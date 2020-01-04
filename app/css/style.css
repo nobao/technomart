@@ -239,6 +239,10 @@ a.bookmarks:focus::before, a.cart:focus::before {
   opacity: 0.5;
 }
 
+.background-red {
+  background-color: #ee3643;
+}
+
 a.checkout {
   box-sizing: border-box;
   width: 150px;
@@ -405,18 +409,24 @@ a.checkout {
   background-color: #ffffff;
 }
 
-.user-logout:hover + .user-name::before,
 .user-logout:hover {
   opacity: 1;
 }
 
-.user-logout:focus,
-.user-logout:focus + .user-name::before {
+.user-logout:focus {
   opacity: 0.3;
 }
 
-.user-logout:focus + .user-name {
-  color: rgba(0, 0, 0, 0.3);
+.user-name:hover::before,
+.user-name:hover {
+  color: #ee3643;
+  opacity: 1;
+}
+
+.user-name:focus::before,
+.user-name:focus {
+  color: #000000;
+  opacity: 0.3;
 }
 
 .user-name::before {
@@ -437,15 +447,15 @@ a.checkout {
 
 .user-logout {
   position: absolute;
-  top: 14px;
-  right: 10px;
+  top: 0px;
+  right: 0px;
 
-  width: 20px;
-  height: 17px;
+  width: 40px;
+  height: 45px;
 
   background-image: url("../img/icon-logout.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center;
 
   opacity: 0.3;
 
@@ -649,11 +659,11 @@ a.checkout {
   bottom: 0;
 }
 
-.promo-block-slider.first {
+.js-higher {
   z-index: 2;
 }
 
-.promo-block-slider.second {
+.js-lower {
   z-index: 1;
 }
 
@@ -720,9 +730,8 @@ a.checkout {
   border-radius: 3px;
 }
 
-.slider-wrapper::before,
-.slider-wrapper::after {
-  content: "";
+.prev-slider-button,
+.next-slider-button {
   position: absolute;
   top: 114px;
   z-index: 10;
@@ -737,11 +746,11 @@ a.checkout {
   cursor: pointer;
 }
 
-.slider-wrapper::before {
+.prev-slider-button {
   left: 24px;
 }
 
-.slider-wrapper::after {
+.next-slider-button {
   right: 24px;
   transform: rotate(180deg);
 }
@@ -1116,10 +1125,6 @@ p.service-slogan {
   
 }
 
-.service-item-block.delivery {
-  z-index: 3;
-}
-
 .service-item-block.delivery::after {
   height: 261px;
   width: 470px;
@@ -1129,19 +1134,11 @@ p.service-slogan {
   background-image: url("../img/delivery-truck.png");
 }
 
-.service-item-block.guarantee {
-  z-index: 2;
-}
-
 .service-item-block.guarantee::after {
   height: 283px;
   width: 390px;
 
   background-image: url("../img/guarantee.png");
-}
-
-.service-item-block.credit {
-  z-index: 1;
 }
 
 .service-item-block.credit a {
@@ -1454,13 +1451,59 @@ p.service-slogan {
   text-decoration: none;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
+  display: none;
+
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 20;
   background-color: #fff;
+}
+
+.show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-close {
@@ -1484,7 +1527,7 @@ p.service-slogan {
   position: absolute;
   top: 9px;
   left: -4px;
-
+  z-index: 10;
 
   width: 29px;
   height: 3px;
@@ -1500,10 +1543,27 @@ p.service-slogan {
 }
 
 .modal-map {
-  display: none;
   width: 940px;
   height: 446px;
+
+  margin-left: -470px;
+  margin-top: -223px;
+
   box-shadow: 0px 0px 14.72px 1.28px rgba(47, 42, 43, 0.5);
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .modal p {
@@ -1512,10 +1572,13 @@ p.service-slogan {
 }
 
 .modal-write-us {
-  display: none;
   box-sizing: border-box;
   width: 620px;
   height: 430px;
+
+  margin-left: -310px;
+  margin-top: -215px;
+
   border-top: 2px solid #ee3643;
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75);
 }
@@ -1598,11 +1661,12 @@ p.service-slogan {
 }
 
 .modal-add-cart {
-  display: none;
-
   box-sizing: border-box;
   width: 620px;
   height: 282px;
+
+  margin-left: -310px;
+  margin-top: -141px;
   
   border-top: 6px solid #ee3643;
   box-shadow: 0px 20px 40px 0px rgba(41, 52, 73, 0.75);
